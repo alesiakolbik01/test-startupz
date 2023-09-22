@@ -1,0 +1,147 @@
+@media screen and (max-width:1300px) {
+    header,
+    article {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .main-logo {
+        width: 110px;
+    }
+
+    .main-menu__list-items *{
+        font-size: 16px;
+    }
+
+    .content h1 {
+        font-size: 50px;
+    }
+
+   .content p, .content div {
+        font-size: 20px;
+   }
+
+   .contact-form {
+        padding: 24px;
+   }
+
+   .main-banner__wrapper {
+        background-size: 70%;
+   }
+
+   .hiring-banner::before,
+   .hiring-banner::after {
+        background-size: 24%;
+   }
+
+   .hiring-banner::before {
+        top: -20%;
+   }
+
+   .hiring-banner::after{
+        top: 22%;
+   }
+
+   .about__picture {
+        width: 15%;
+   }
+
+   .main-menu__list-items button{
+    border: none;
+    padding: 0;
+    height: auto;
+   }
+
+   .content {
+    width: 100%;
+   }
+
+   .main-banner__wrapper,
+   .about,
+   .about__values {
+    height: 100vh;
+   }
+}
+
+@media screen and (max-width:980px) {
+    header,
+    article,
+    .footer {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+
+   .content p, .content div {
+        font-size: 18px;
+   }
+
+    .about__lists-items,
+    .our-works__list-items {
+        flex-direction: column;
+    }
+
+    .about__lists-item,
+    .our-works__list-item,
+    .about__values .about__lists-item:last-child,
+    .about__values .about__lists-item:first-child {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        padding: 16px;
+    }
+
+    .contact-form {
+        padding: 24px;
+   }
+
+   .contact-form__body {
+    width: 100%;
+   }
+
+   .footer {
+    padding-top: 24px;
+    padding-bottom: 24px;
+   }
+
+   .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+   }
+
+   .footer__column:first-child{
+    flex-direction: column;
+    order: 5;
+    width: 50%;
+    margin-top: 20px;
+   }
+
+   .footer__column {
+    width: 50%;
+   }
+
+   .footer__column:last-child {
+    margin-top: 20px;
+   }
+
+   .social-list li {
+    flex-direction: row;
+    margin-bottom: 0;
+    margin-right: 15px;
+   }
+
+   .chat-bot {
+    bottom: 2%;
+    right: 2%;
+    width: 75px;
+    height: 75px;
+   }
+
+   .tooltip {
+    right: 51px;
+   }
+
+}

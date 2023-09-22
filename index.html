@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Fredericka+the+Great&family=Work+Sans:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/normalize.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/mobile.css">
 </head>
 <body>
     <div class="app">
@@ -26,7 +27,7 @@
         </header>
         <article class="main-banner__wrapper">
             <div class="content main-banner__content">
-                <h1 class="content main-banner__header">We Create Startups.</h1>
+                <h1 class="main-banner__header">We Create Startups.</h1>
                 <p class="main-banner__description text__orange">We are startup studio that develops and launches new companies.</p>
                 <button class="btn__round btn__blue" type="button" href="#works">See our works</button>
             </div>
@@ -133,21 +134,23 @@
             </div>
         </article>
         <article class="contact-form bg_orange">
-            <h1 class="contact-form__title">Are you ready<br> to board this rocket ship?</h1>
-            <h2 class="contact-form__text">Share your excitement with us.</h2>
-            <form class="contact-form__body" action="/user-message" method="POST">
-                <input type="text" name="username" placeholder="Name*"/>
-                <input type="email" name="email" placeholder="Email*"/>
-                <textarea name="message" placeholder="Message*"></textarea>
-                <button class="btn__round btn__grey" type="submit">Shoot us a message</button>
-            </form>
+            <div class="content">
+                <h1 class="contact-form__title">Are you ready<br> to board this rocket ship?</h1>
+                <h2 class="contact-form__text">Share your excitement with us.</h2>
+                <form class="contact-form__body" action="/user-message" method="POST">
+                    <input type="text" name="username" placeholder="Name*"/>
+                    <input type="email" name="email" placeholder="Email*"/>
+                    <textarea name="message" placeholder="Message*"></textarea>
+                    <button class="btn__round btn__grey" type="submit">Shoot us a message</button>
+                </form>
+            </div>
         </article>
-        <footer class="main-footer">
-            <div class="main-footer__column">
+        <footer class="footer">
+            <div class="footer__column">
                 <h1 class="column__title"><div class="main-logo"></div></h1>
                 <div class="text__grey">© 2020 Startupz.<br> All rights reserved.</div>
             </div>
-            <div class="main-footer__column">
+            <div class="footer__column">
                 <h1 class="column__title">Companies</h1>
                 <ul class="footer-nav">
                     <li><a href="#">Tolq</a></li>
@@ -157,12 +160,12 @@
                     <li><a href="#">Labs</a></li>
                 </ul>
             </div>
-            <div class="main-footer__column">
+            <div class="footer__column">
                 <h1 class="column__title">Contact</h1>
                 <div class="adress-text text__grey">World Trade Center - The Hague<br/> Prinses Margrietplantsoen 33<br/> 2595 AM The Hague<br/> The Netherlands</div>
                 <a class="mail-link" href="mailto:test@test.domen">Send us an email</a>
             </div>
-            <div class="main-footer__column">
+            <div class="footer__column">
                 <h1 class="column__title">Follow us</h1>
                 <ul class="social-list">
                     <li><a href="#"><img src="./image/twitter.svg"/></a></li>
@@ -171,6 +174,10 @@
                 </ul>
             </div>
         </footer>
+        <div class="chat-bot">
+            <div class="tooltip">Hi! I am Ben, your virtual assistant. How can I make your day better?</div>
+            <div class="btn-close-tp">X</div>
+        </div>
     </div>
     <script
   src="https://code.jquery.com/jquery-3.7.1.slim.js"
