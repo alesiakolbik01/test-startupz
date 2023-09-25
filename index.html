@@ -137,11 +137,12 @@
             <div class="content">
                 <h1 class="contact-form__title">Are you ready<br> to board this rocket ship?</h1>
                 <h2 class="contact-form__text">Share your excitement with us.</h2>
-                <form class="contact-form__body" action="/user-message" method="POST">
-                    <input type="text" name="username" placeholder="Name*"/>
-                    <input type="email" name="email" placeholder="Email*"/>
-                    <textarea name="message" placeholder="Message*"></textarea>
-                    <button class="btn__round btn__grey" type="submit">Shoot us a message</button>
+                <form id="user-form" class="contact-form__body" onsubmit="event.preventDefault()" novalidate>
+                    <div class="error-message">Please fill all required fields*</div>
+                    <input type="text" required name="username" placeholder="Name*"/>
+                    <input type="email" required name="email" placeholder="Email*" autocomplete="off"/>
+                    <textarea name="message" required placeholder="Message*"></textarea>
+                    <button id="btn-send-form" class="btn__round btn__grey" type="submit">Shoot us a message</button>
                 </form>
             </div>
         </article>
@@ -177,6 +178,12 @@
         <div class="chat-bot" id="chat-bot">
             <div class="tooltip">Hi! I am Ben, your virtual assistant. How can I make your day better?</div>
             <div class="btn-close-tp" id="chat-bot-btn">X</div>
+        </div>
+    </div>
+    <div id="modal" class="modal-wrapper">
+        <div class="modal-body">
+            <div id="mb-btm-close" class="modal-body__btn-close">X</div>
+            <div id="mb-message" class="modal-body__message">Thanks! Your message was sending!</div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>

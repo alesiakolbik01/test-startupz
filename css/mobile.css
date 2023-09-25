@@ -191,6 +191,15 @@
 
 }
 
+@media screen and (max-width:600px) { 
+
+    .modal-body {
+        width: calc(100% - 34px);
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}
+
 @media screen and (max-width:550px) { 
     .main-menu__list-item:last-child {
         width: 100%;

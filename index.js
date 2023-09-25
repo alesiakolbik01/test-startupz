@@ -26,6 +26,49 @@ const handleClickMenuItem = (e) => {
     }
 }
 
+const validateForm = (data) => {
+    
+    for(let i = 0, length = data.length; i < length; i += 1){
+        if(data[i].req && !data[i].value){
+            return false;
+        }
+    }
+
+    return true;
+}
+
+const getFormData = (form) => {
+    return form.find('input, textarea').map(
+        function(){
+            return { 
+                    value: $( this ).val(),
+                    req: $( this ).attr('required')
+                };
+        }
+    );
+}
+
+const handleSendForm = () => {
+    const form = $('#user-form');
+    const formData = getFormData(form)
+    const isValid = validateForm(formData);
+    if(isValid){
+        form.removeClass('no-valid');
+        //sending the request to the server
+        toggleCloseModal();
+    }
+    else
+    {
+        form.addClass('no-valid');
+    }
+    
+}
+
+const toggleCloseModal = () => {
+
+    $( "#modal" ).first().fadeToggle( "slow");
+}
+
 $( document ).ready(function() {
     console.log( "ready!" );
     $('#chat-bot').on('click', toggleHideChatBot);
@@ -33,5 +76,7 @@ $( document ).ready(function() {
     $('#main-menu').on('click', handleClickMenuItem);
     $('#btn-to-works').on('click', handleClickMenuItem);
     $('#main-logo').on('click', handleClickMenuItem);
+    $('#btn-send-form').on('click', handleSendForm);
+    $('#mb-btm-close').on('click', toggleCloseModal)
 });
 
