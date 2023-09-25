@@ -24,6 +24,10 @@ ul {
     height: 100%;
 }
 
+.content p {
+    width: 100%;
+}
+
 p, h1, h2, h3, h4, div, a {
     padding: 0;
     margin: 0;
@@ -74,6 +78,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 10;
     background: #ffffffb8;
 }
 
@@ -100,6 +105,18 @@ header {
     line-height: 18px;
     display: flex;
     align-items: center;
+    cursor: pointer;
+}
+
+.main-menu__list-item span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.main-menu__list-item button{
+    cursor: pointer;
 }
 
 .header__content {
@@ -188,10 +205,20 @@ header {
 
 .about__header {
     display: flex;
-    align-items: center;
     margin-bottom: 80px;
     justify-content: space-between;
+    align-items: stretch;
     width: 100%;
+}
+
+.about__header-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about__header-wrapper .about__title {
+    margin-bottom: 32px;
 }
 
 .about__picture {
@@ -200,6 +227,7 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    flex-shrink: 0;
 }
 
 .about__picture-qustionmark {
@@ -212,7 +240,6 @@ header {
     line-height: 50px;
     letter-spacing: -0.02em;
     text-align: left;
-    margin-bottom: 32px;
 }
 
 .about__description {
@@ -599,6 +626,7 @@ input[type="text"], input[type="email"], textarea {
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
+    transition: all .5s;
   }
 
   .tooltip {
@@ -626,4 +654,26 @@ input[type="text"], input[type="email"], textarea {
     font-weight: 500;
     font-size: 24px;
     cursor: pointer;
+  }
+
+
+  .chat-bot.hidden {
+    right: -24px;
+    border-color: #ef915a;
+    width: 92px;
+    height: 92px;
+  }
+
+  .chat-bot.hidden .tooltip{
+    display: none;
+  }
+
+  @keyframes bot-pulsing {
+    from {box-shadow: 0px 1px 4px 0px #FF9800;}
+    to {box-shadow: 0px 1px 16px 6px #00BCD4;}
+  }
+  
+  /* The element to apply the animation to */
+  .chat-bot.hidden {
+    animation: 3s linear .1s infinite alternate bot-pulsing;
   }
